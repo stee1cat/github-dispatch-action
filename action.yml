@@ -1,0 +1,28 @@
+name: 'Dispatch'
+description: 'Dispatch an onchange event to run webhook'
+author: 'Gennadiy Khatuntsev <e.steelcat@gmail.com>'
+
+inputs:
+  access-token:
+    description: 'Token for the repo'
+    required: true
+
+  event-target:
+    description: 'Target repository is configured to build on the webhook'
+    required: true
+
+  event-type:
+    description: 'Event type to dispatch'
+    required: true
+
+  payload-sender:
+    description: 'App name'
+    required: true
+
+  payload-ref:
+    description: 'Ref to checkout (SHA, branch, tag)'
+    required: true
+
+runs:
+  using: 'docker'
+  image: './Dockerfile'
