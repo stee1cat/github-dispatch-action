@@ -3,23 +3,23 @@ description: 'Dispatch an onchange event to run webhook'
 author: 'Gennadiy Khatuntsev <e.steelcat@gmail.com>'
 
 inputs:
-  access-token:
+  access_token:
     description: 'Token for the repo'
     required: true
 
-  event-target:
+  event_target:
     description: 'Target repository is configured to build on the webhook'
     required: true
 
-  event-type:
+  event_type:
     description: 'Event type to dispatch'
     required: true
 
-  payload-sender:
+  payload_sender:
     description: 'App name'
     required: true
 
-  payload-ref:
+  payload_ref:
     description: 'Ref to checkout (SHA, branch, tag)'
     required: true
 

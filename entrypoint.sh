@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-ref=$(echo ${PAYLOAD_REF#refs/heads/})
+ref=$(echo ${INPUT_PAYLOAD_REF#refs/heads/})
 data="{\"event_type\": \"${INPUT_EVENT_TYPE}\", \"client_payload\": {\"sender\": \"${INPUT_PAYLOAD_SENDER}\", \"ref\": \"${ref}\"}}"
 
 echo "Send '${INPUT_EVENT_TYPE}' event to ${INPUT_EVENT_TARGET} with payload: '${data}'"
